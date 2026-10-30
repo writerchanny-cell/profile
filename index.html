@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박채은 (Park Chae Eun) - Artist Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700&family=Pretendard:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Pretendard', sans-serif;
+            background-color: #fcfbf9;
+            color: #262626;
+        }
+        .serif {
+            font-family: 'Noto Serif KR', serif;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-amber-100 selection:text-amber-900">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-neutral-200/60 transition-all">
+        <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="serif text-xl font-bold tracking-wider text-neutral-900">PARK CHAE EUN</a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-neutral-600">
+                <a href="#about" class="hover:text-amber-800 transition">소개 & 이력</a>
+                <a href="#picturebooks" class="hover:text-amber-800 transition">그림책</a>
+                <a href="#ceramics" class="hover:text-amber-800 transition">도예</a>
+                <a href="#brands" class="hover:text-amber-800 transition">브랜드 & 공간</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-5xl w-full mx-auto px-6 py-12 space-y-20">
+
+        <!-- Hero Section -->
+        <section class="text-center py-10 md:py-16 border-b border-neutral-200/60">
+            <p class="text-xs uppercase tracking-widest text-amber-800 font-semibold mb-4">Ceramic Artist & Picture Book Author</p>
+            
+            <h1 class="serif text-2xl sm:text-4xl md:text-5xl font-bold text-neutral-800 leading-relaxed mb-8">
+                "하늘 아래 같은 색은 없다.<br/>
+                그리고 <span class="text-amber-800">모든 색은</span><br/>
+                무언가를 기억한다."
+            </h1>
+            
+            <div class="space-y-3 text-neutral-600 text-sm sm:text-base font-normal max-w-2xl mx-auto leading-relaxed">
+                <p class="tracking-wide text-neutral-500 font-light">No two colors are ever the same.<br/>Every color remembers something.</p>
+                <div class="w-8 h-[1px] bg-neutral-300 mx-auto my-4"></div>
+                <p class="text-neutral-700">그림책의 글과 그림과 흙의 감각을 통해,<br/>기억될 찰나의 순간과 색채를 기록합니다.</p>
+            </div>
+        </section>
+
+        <!-- About & Career Section -->
+        <section id="about" class="scroll-mt-20">
+            <div class="flex flex-col md:flex-row gap-10 items-start">
+                <!-- Profile Image & Artist Statement -->
+                <div class="w-full md:w-1/3 space-y-6">
+                    <div>
+                        <h2 class="serif text-2xl font-bold text-neutral-800 mb-2">Profile</h2>
+                        <p class="text-xs text-neutral-500 uppercase tracking-wider mb-4">Artist Statement & Experience</p>
+                        <div class="w-10 h-0.5 bg-amber-800 mb-6"></div>
+                    </div>
+
+                    <!-- Profile Photo Card (Vertical Rectangular 3:4 aspect ratio) -->
+                    <div class="bg-white p-4 rounded-xl border border-neutral-200/80 shadow-sm text-center">
+                        <div class="relative w-full aspect-[3/4] max-w-[240px] mx-auto mb-4 rounded-lg overflow-hidden bg-neutral-100 border border-neutral-200 flex items-center justify-center">
+                            <img id="img-profile" src="https://postfiles.pstatic.net/MjAyNjEwMzBfMjI1/MDAxNzkzMzY5NTAyMjc1.k2K7sX6d_qeosR2OBhxLjM44o1yQ8NIMDK-byZPMLTkg.pvPJgfrRCN8Jbygy-POocmwsNfXSodcbqDXKEK9TeFEg.JPEG/40143277_%EB%B3%B5%EC%82%AC.JPEG?type=w773" alt="박채은 작가 프로필" class="w-full h-full object-cover">
+                        </div>
+                        <p class="serif text-lg font-bold text-neutral-800 mb-1">박채은</p>
+                        <p class="text-xs text-amber-800 font-medium mb-4">도예가 · 그림책 작가</p>
+                        <label class="cursor-pointer inline-flex items-center justify-center gap-1.5 text-xs bg-neutral-100 hover:bg-neutral-200 text-neutral-700 px-3 py-2 rounded-lg transition w-full font-medium">
+                            <i data-lucide="camera" class="w-3.5 h-3.5"></i>
+                            <span>프로필 사진 변경</span>
+                            <input type="file" class="hidden" accept="image/*" onchange="handleOptimizedUpload(event, 'img-profile', 'profile')">
+                        </label>
+                    </div>
+
+                    <div class="text-center space-y-2 text-sm text-neutral-600 leading-relaxed pt-2">
+                        <p>그림책의 글과 그림과 흙의 감각을 통해,<br/>기억될 찰나의 순간과 색채를 기록합니다.</p>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-2/3 space-y-8">
+                    <!-- Education -->
+                    <div class="bg-white p-6 rounded-xl border border-neutral-200/80 shadow-sm">
+                        <h3 class="text-base font-semibold text-neutral-800 flex items-center gap-2 mb-3">
+                            <i data-lucide="graduation-cap" class="w-4 h-4 text-amber-800"></i> 학력 (Education)
+                        </h3>
+                        <p class="text-sm text-neutral-700 font-medium">국립목포대학교 도예학과</p>
+                    </div>
+
+                    <!-- Selected Grants / Awards -->
+                    <div class="bg-white p-6 rounded-xl border border-neutral-200/80 shadow-sm">
+                        <h3 class="text-base font-semibold text-neutral-800 flex items-center gap-2 mb-4">
+                            <i data-lucide="award" class="w-4 h-4 text-amber-800"></i> 주요 선정 및 지원 사업 (Grants)
+                        </h3>
+                        <ul class="space-y-3 text-sm text-neutral-700">
+                            <li class="flex items-start gap-2">
+                                <span class="px-2 py-0.5 text-xs font-semibold bg-amber-100 text-amber-900 rounded mt-0.5">2026</span>
+                                <div>
+                                    <span class="font-medium">담양 청년창업지원사업 선정</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="px-2 py-0.5 text-xs font-semibold bg-amber-100 text-amber-900 rounded mt-0.5">2026</span>
+                                <span>한국예술인복지재단 예술인지원금 선정</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="px-2 py-0.5 text-xs font-semibold bg-neutral-100 text-neutral-700 rounded mt-0.5">2025</span>
+                                <span>화순문화관광재단 예술인창작지원 선정</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Brands Operated -->
+                    <div id="brands" class="bg-white p-6 rounded-xl border border-neutral-200/80 shadow-sm scroll-mt-20">
+                        <h3 class="text-base font-semibold text-neutral-800 flex items-center gap-2 mb-4">
+                            <i data-lucide="briefcase" class="w-4 h-4 text-amber-800"></i> 운영 브랜드 (Brands & Business)
+                        </h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                            <div class="p-3 bg-neutral-50 rounded-lg border border-neutral-100">
+                                <p class="text-xs text-amber-800 font-semibold">도자기 브랜드</p>
+                                <p class="text-sm font-bold text-neutral-800 mt-1">챈챈세라믹</p>
+                            </div>
+                            <div class="p-3 bg-neutral-50 rounded-lg border border-neutral-100">
+                                <p class="text-xs text-amber-800 font-semibold">그림책 출판사</p>
+                                <p class="text-sm font-bold text-neutral-800 mt-1">챈챈북스</p>
+                            </div>
+                            <div class="p-3 bg-neutral-50 rounded-lg border border-neutral-100">
+                                <p class="text-xs text-amber-800 font-semibold">복합 공간 / 목장</p>
+                                <p class="text-sm font-bold text-neutral-800 mt-1">덕림목장</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Picture Books Section -->
+        <section id="picturebooks" class="scroll-mt-20 pt-8 border-t border-neutral-200/60">
+            <div class="flex justify-between items-end mb-8">
+                <div>
+                    <h2 class="serif text-2xl font-bold text-neutral-800">Picture Books</h2>
+                    <p class="text-xs text-neutral-500 uppercase tracking-wider mt-1">그림책 작업 및 출판 도서</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Book Card 1 -->
+                <div class="bg-white rounded-xl border border-neutral-200/80 overflow-hidden shadow-sm flex flex-col">
+                    <div class="relative bg-amber-500/10 p-6 flex items-center justify-center min-h-[300px]">
+                        <img id="img-book-1" src="https://image.aladin.co.kr/product/30023/22/cover500/e562530214_1.jpg" alt="난, 누구까?" class="max-h-[280px] object-contain shadow-md rounded">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between bg-white">
+                        <div>
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="serif text-xl font-bold text-neutral-800">난, 누구까?</h3>
+                                <span class="text-xs font-semibold px-2 py-0.5 bg-neutral-100 text-neutral-600 rounded">2022.08</span>
+                            </div>
+                            <p class="text-xs text-amber-800 font-medium mb-3">저자: 박채은 | 출판: 챈챈북스</p>
+                            <p class="text-xs text-neutral-600 leading-relaxed">자아를 찾아가는 카멜레온의 이야기를 독창적인 색감과 패턴의 질감으로 표현한 그림책입니다.</p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-neutral-100 flex items-center justify-between">
+                            <label class="cursor-pointer text-xs bg-neutral-100 hover:bg-neutral-200 text-neutral-700 px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition font-medium">
+                                <i data-lucide="camera" class="w-3.5 h-3.5"></i>
+                                <span>사진 변경하기</span>
+                                <input type="file" class="hidden" accept="image/*" onchange="handleOptimizedUpload(event, 'img-book-1', 'book1')">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Book Card 2 -->
+                <div class="bg-white rounded-xl border border-neutral-200/80 overflow-hidden shadow-sm flex flex-col">
+                    <div class="relative bg-pink-500/10 p-6 flex items-center justify-center min-h-[300px]">
+                        <img id="img-book-2" src="https://image.aladin.co.kr/product/38083/15/cover500/k312034086_1.jpg" alt="나만 없어 고양이!" class="max-h-[280px] object-contain shadow-md rounded">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between bg-white">
+                        <div>
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="serif text-xl font-bold text-neutral-800">나만 없어 고양이!</h3>
+                                <span class="text-xs font-semibold px-2 py-0.5 bg-neutral-100 text-neutral-600 rounded">2025.12</span>
+                            </div>
+                            <p class="text-xs text-amber-800 font-medium mb-3">저자: 박채은 | 출판: 챈챈북스</p>
+                            <p class="text-xs text-neutral-600 leading-relaxed">화려한 분홍빛 유기적 패턴과 상상력이 담긴 인물 묘사가 인상적인 그림책 작품입니다.</p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-neutral-100 flex items-center justify-between">
+                            <label class="cursor-pointer text-xs bg-neutral-100 hover:bg-neutral-200 text-neutral-700 px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition font-medium">
+                                <i data-lucide="camera" class="w-3.5 h-3.5"></i>
+                                <span>사진 변경하기</span>
+                                <input type="file" class="hidden" accept="image/*" onchange="handleOptimizedUpload(event, 'img-book-2', 'book2')">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ceramics Section -->
+        <section id="ceramics" class="scroll-mt-20 pt-8 border-t border-neutral-200/60">
+            <div class="flex justify-between items-end mb-8">
+                <div>
+                    <h2 class="serif text-2xl font-bold text-neutral-800">Ceramic Arts</h2>
+                    <p class="text-xs text-neutral-500 uppercase tracking-wider mt-1">챈챈세라믹 - 도예 작업 및 오브제</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Ceramic Card 1: Nerikomi Cups -->
+                <div class="bg-white rounded-xl border border-neutral-200/80 overflow-hidden shadow-sm flex flex-col">
+                    <div class="relative bg-emerald-950/10 p-6 flex items-center justify-center min-h-[300px]">
+                        <img id="img-ceramic-1" src="https://postfiles.pstatic.net/MjAyNjEwMzBfMjc4/MDAxNzkzMzY5NDc3NTc2.Ub26WCIyvsnPQ3KmVUkE6Sz7oe6AAopXbcKizOGkjDMg._w9wM-jLcV30hQmiOHAYYj99KcZ3TfVR7AHHpfxVhpog.PNG/4444.png?type=w773" alt="연리문 컵 시리즈" class="max-h-[280px] object-contain shadow-md rounded">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between bg-white">
+                        <div>
+                            <h3 class="serif text-xl font-bold text-neutral-800 mb-1">연리문(練理文) 컵 시리즈</h3>
+                            <p class="text-xs text-amber-800 font-medium mb-3">챈챈세라믹 | Marble & Texture Line</p>
+                            <p class="text-xs text-neutral-600 leading-relaxed">서로 다른 색의 흙이 빚어내는 자연스러운 결과 수묵화 같은 밀도감이 특징인 도자기 작품입니다.</p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-neutral-100 flex items-center justify-between">
+                            <label class="cursor-pointer text-xs bg-neutral-100 hover:bg-neutral-200 text-neutral-700 px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition font-medium">
+                                <i data-lucide="camera" class="w-3.5 h-3.5"></i>
+                                <span>사진 변경하기</span>
+                                <input type="file" class="hidden" accept="image/*" onchange="handleOptimizedUpload(event, 'img-ceramic-1', 'ceramic1')">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ceramic Card 2: Damyang Bamboo Node Cup -->
+                <div class="bg-white rounded-xl border border-neutral-200/80 overflow-hidden shadow-sm flex flex-col">
+                    <div class="relative bg-neutral-100 p-6 flex items-center justify-center min-h-[300px]">
+                        <img id="img-ceramic-2" src="https://postfiles.pstatic.net/MjAyNjEwMzBfOTUg/MDAxNzkzMzY5NDQ5Mjc5.Cru1zYVK1w-_n2MEMKQh5y-OFIsbSS_E5VCFftNTVmUg.6UIcvvV5wwBs3pqIW9JoVEhaqR-pmJZnlskfSi5chl0g.PNG/1.png?type=w773" alt="담양 대나무 마디 컵" class="max-h-[280px] object-contain shadow-md rounded">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between bg-white">
+                        <div>
+                            <h3 class="serif text-xl font-bold text-neutral-800 mb-1">담양 대나무 마디 컵</h3>
+                            <p class="text-xs text-amber-800 font-medium mb-3">챈챈세라믹 | Bamboo Node Series</p>
+                            <p class="text-xs text-neutral-600 leading-relaxed">대나무의 마디 구조와 다각의 직선적 조형미를 흙의 따뜻한 감각과 결합하여 담아낸 도자기 컵입니다.</p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-neutral-100 flex items-center justify-between">
+                            <label class="cursor-pointer text-xs bg-neutral-100 hover:bg-neutral-200 text-neutral-700 px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition font-medium">
+                                <i data-lucide="camera" class="w-3.5 h-3.5"></i>
+                                <span>사진 변경하기</span>
+                                <input type="file" class="hidden" accept="image/*" onchange="handleOptimizedUpload(event, 'img-ceramic-2', 'ceramic2')">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-900 text-neutral-400 py-12 border-t border-neutral-800 mt-20">
+        <div class="max-w-5xl mx-auto px-6 text-center space-y-4">
+            <p class="serif text-lg font-bold text-neutral-100">PARK CHAE EUN</p>
+            <p class="text-xs text-neutral-500 max-w-md mx-auto">
+                챈챈세라믹 · 챈챈북스 · 덕림목장<br/>
+                국립목포대학교 도예학과
+            </p>
+            <div class="pt-4 text-xs text-neutral-600">
+                &copy; 2026 Park Chae Eun. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script for Image Compression & Local Storage -->
+    <script>
+        lucide.createIcons();
+
+        function handleOptimizedUpload(event, imgElementId, storageKey) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const img = new Image();
+                img.onload = function() {
+                    const maxDim = 800;
+                    let width = img.width;
+                    let height = img.height;
+
+                    if (width > height) {
+                        if (width > maxDim) {
+                            height = Math.round((height * maxDim) / width);
+                            width = maxDim;
+                        }
+                    } else {
+                        if (height > maxDim) {
+                            width = Math.round((width * maxDim) / height);
+                            height = maxDim;
+                        }
+                    }
+
+                    const canvas = document.createElement('canvas');
+                    canvas.width = width;
+                    canvas.height = height;
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(img, 0, 0, width, height);
+
+                    const optimizedDataUrl = canvas.toDataURL('image/jpeg', 0.82);
+
+                    document.getElementById(imgElementId).src = optimizedDataUrl;
+
+                    try {
+                        localStorage.setItem('p_img_' + storageKey, optimizedDataUrl);
+                    } catch (err) {
+                        console.warn('LocalStorage limit reached:', err);
+                    }
+                };
+                img.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const items = [
+                { id: 'img-profile', key: 'profile' },
+                { id: 'img-ceramic-1', key: 'ceramic1' },
+                { id: 'img-ceramic-2', key: 'ceramic2' }
+            ];
+
+            items.forEach(item => {
+                const saved = localStorage.getItem('p_img_' + item.key);
+                if (saved) {
+                    const el = document.getElementById(item.id);
+                    if (el) el.src = saved;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
